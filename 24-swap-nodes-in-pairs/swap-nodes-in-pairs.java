@@ -21,6 +21,7 @@ class Solution {
             ListNode second=temp.next.next;
 
             temp.next=second;
+
             first.next=second.next;
             second.next=first;
 
