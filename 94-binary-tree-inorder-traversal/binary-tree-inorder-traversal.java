@@ -37,13 +37,13 @@ class Solution {
                 node=node.left;
             }else{
                 if(st.isEmpty()){
-                    break;
+                    return list;
                 }
                 node=st.pop();
                 list.add(node.val);
                 node=node.right;
             }
         }
-    return list;
-    }
+    }    
 }
+    
