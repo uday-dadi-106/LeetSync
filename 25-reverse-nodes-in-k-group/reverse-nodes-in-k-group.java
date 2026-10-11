@@ -34,7 +34,9 @@ class Solution {
         while(temp!=null){
          ListNode kthNode=getNode(temp,k);
             if(kthNode==null){
-                prev.next=temp;
+                if(prev!=null){
+                   prev.next=temp;
+                }
               break;
             }
             ListNode newNode=kthNode.next;
