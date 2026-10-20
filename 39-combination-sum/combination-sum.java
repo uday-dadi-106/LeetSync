@@ -13,8 +13,8 @@ class Solution {
             ds.add(candidates[index]);
             target=target-candidates[index];
             subset(index,target,candidates,list,ds);
-            target=target+candidates[index];
             ds.remove(ds.size()-1);
+            target=target+candidates[index];
             
         }
         subset(index+1,target,candidates,list,ds);
