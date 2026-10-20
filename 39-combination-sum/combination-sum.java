@@ -11,8 +11,11 @@ class Solution {
         }
         if(candidates[index]<=target){
             ds.add(candidates[index]);
-            subset(index,target-candidates[index],candidates,list,ds);
+            target=target-candidates[index];
+            subset(index,target,candidates,list,ds);
+            target=target+candidates[index];
             ds.remove(ds.size()-1);
+            
         }
         subset(index+1,target,candidates,list,ds);
     }
