@@ -1,14 +1,11 @@
 class Solution {
     public static void subset(int index,int target,int[] candidates,List<List<Integer>> list,ArrayList<Integer> ds){
-       if(target==0){
-        ArrayList<Integer> temp=new ArrayList<Integer>();
-         temp.addAll(ds);
-         list.add(temp);
-         return ;
-       }
-        if(index==candidates.length||target<0){
-            return;
+       if(index==candidates.length){
+        if(target==0){
+            list.add(new ArrayList<>(ds));
         }
+        return;
+       }
         if(candidates[index]<=target){
             ds.add(candidates[index]);
             target=target-candidates[index];
